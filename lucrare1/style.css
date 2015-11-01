@@ -1,0 +1,92 @@
+body{
+	background-color:#DEDEDF;
+	background-attachment: fixed;
+	background-position: bottom 0px left 0px, bottom 0px right 0px, top left, top left;
+	background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+	-webkit-background-size: auto, auto, auto, cover;
+	-moz-background-size: auto, auto, auto, cover;
+	-o-background-size: auto, auto, auto, cover;
+	background-size: auto, auto, auto, cover;
+	color:#040404;  
+	font-family: georgia;
+	font-family: 'Inconsolata';
+	font-size:12px;
+	line-height:123%;
+	text-align:left
+	padding: 0px;
+}
+   
+#wrapper{
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:40px;
+}
+
+#wrapper #title{
+	height:50px;
+	font-size:36px;
+}
+
+.poststyle {
+	background-color:#999999;
+	overflow:hidden;
+	margin-top:20px;
+	border: 1px solid #3F3F3F;
+	padding:12px;
+}
+
+.box-image{
+	float: left
+	padding:20px;
+}
+
+.box-image img{
+	width:28%;
+	margin:2%;
+}
+
+.comments{
+	text-size:11px;
+}
+.comments span{
+	margin-left:auto;
+}
+
+.comments .left{
+float:left;
+	text-align:left;
+}
+.comments .right{
+	float:right;
+	text-align:right;
+}
+.quote{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:17px;
+}
+
+table, th, td{
+	padding: 20px 10px 20px 10px;
+	border: #DEDEDF solid 2px;
+}
+
+sup, sub{
+	font-size:10px;
+}
+
+ol{
+	line-height:1.4em;
+}
+
+.first-row  td{
+	width:25%;
+}
+
+#yellow-cell, #pink-cell{
+   transition: background-color .5s ease-in-out;
+   -moz-transition: background-color .5s ease-in-out;
+   -webkit-transition: background-color .5s ease-in-out; 
+  -o-transition: background-color .5s ease-in-out; 
+}
