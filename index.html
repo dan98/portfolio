@@ -15,74 +15,113 @@ Efectuat pentru Lucrarea nr.2, Informatică. Prof. Miron Raisa :)
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
 <link rel="stylesheet" type="text/css" href="./style.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
-<script>
-    (function($){
-        $(document).ready(function(){
-            $("a[title]").style_my_tooltips({
-                tip_follows_cursor:true,
-                tip_delay_time:90,
-                tip_fade_speed:600,
-                attribute:"title"
-            });
-        });
-    })(jQuery);
-</script>
+<title>aici Grosu</title>
 </head>
 <body>
-
-
-
-<title>aici Grosu</title>
-
-<div id="header">
-    <div class="navi">
-        <a href="./index.html">Acasă</a>
-        <a href="./bio.html">Bio</a>
-        <a href="./uploads.html">Materiale</a>
-        <a href="./references.html">Referințe</a>
-        <a href="./contact.html">Contacte</a>
-    </div>
-</div>
-
 <div id="sidebar">
     <img src="./img/profile.png">
     <div id="name">Grosu <span style="font-size:15px; margin-left:-1px;">Daniel</span></div>
-    <div id="bio">dacă aș fi ca toți, cine ar fi ca mine?</div>
+    <div id="bio">dacă aș fi ca toți, cine ar fi ca mine? a?</div>
     <div class="links">
-        <div><a href="https://www.facebook.com/dr.november">facebook</a></div>
-        <div><a href="https://www.facebook.com/dr.november">tumblr</a></div>
+        <div><a target="_blank" href="https://www.facebook.com/dr.november">facebook</a></div>
+        <div><a target="_blank" href="https://dissonare.tumblr.com">tumblr</a></div>
     </div>
-
 </div>
-<div id="content" style="position: relative; height: 756px;" class="masonry">
+<div class="ajax">
+<div id="header">
+    <div class="navi">
+        <a class="ajax-link" data-tab="index">Acasă</a>
+        <a class="ajax-link" data-tab="bio">Bio</a>
+        <a class="ajax-link" data-tab="uploads">Materiale</a>
+        <a class="ajax-link" data-tab="references">Referințe</a>
+        <a class="ajax-link" data-tab="contacts">Contacte</a>
+    </div>
+</div>
+
+<div id="index" class="content">
     <div class="entry masonry-brick" style="position: absolute; top: 0px; left: 0px;">
         <div class="permalinks">
             Teza Științifică
         </div>
         <div id="jaz">
             <div class="photo">
-                <a href="/">
+                <a class="ajax-link" data-tab="post-graph_theory">
                     <img class="photo" src="./img/posts/graph_small.png" width="100%">
                 </a>
             </div>
         </div>
     </div>
-    <div class="entry masonry-brick" style="position: absolute; top: 0px; left: 252px;">
+    <div class="entry masonry-brick" style="position: absolute; top: 0px; left: 300px;">
         <div class="permalinks">
             Lucrarea #1
         </div>
         <div id="jaz">
             <div class="photo">
-                <a onclick='$("#content").load("./page1.html");'>
-                    <img class="photo" src="./img/posts/imagination_small.png" width="100%">
+                <a class="ajax-link" data-tab="post-imagination">
+                    <img class="photo" src="./img/posts/imagination_small.gif" style="width:300px !important;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="entry masonry-brick" style="position: absolute; top: 250px; left: 250px;">
+        <div class="permalinks">
+            Infoarena
+        </div>
+        <div id="jaz">
+            <div class="photo">
+                <a target="_blank" href="http://www.infoarena.ro/utilizator/daniel.grosu">
+                    <img class="photo" src="http://www.infoarena.ro/userwidget/daniel.grosu" width="100%">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="entry masonry-brick" style="position: absolute; top: 230px; left: 20px;">
+        <div class="permalinks">
+            Facebook
+        </div>
+        <div id="jaz">
+            <div class="photo">
+                <a target="_blank" href="https://www.facebook.com/dr.november">
+                    <img class="photo" src="https://badge.facebook.com/badge/100009009621947.56.1398566901.png" width="100%">
                 </a>
             </div>
         </div>
     </div>
 </div>
-<div id="s-m-t-tooltip" style="position: absolute; display: none;">
-    <div style="width: 100%; height: 100%;"></div>
+
+<div id="post-imagination" class="content">
+    <div id="content">
+        <iframe style="margin:20px; width:98%; height:98%" src="./lucrare1/index.html"></iframe>
+    </div>
 </div>
+
+<div id="post-graph_theory" class="content">
+    <div id="content">
+        <iframe style="margin:20px;  width:98%; height:98%" src="https://docs.google.com/uc?authuser=0&id=0B66ByXlvODpcQlRRT3JXUHBlZGM#page=3&zoom=70"></iframe>
+    </div>
+</div>
+
+<div id="references" class="content">
+<img src="http://www.infoarena.ro/userwidget/daniel.grosu">
+</div>
+
+</div>
+
+<div id="footer">
+a Daniel Grosu production © 2015
+</div>
+<script>
+$(document).ready(function(){
+    $('.ajax-link').click(function(){
+        var tab_id = $(this).attr('data-tab');
+        $('.content').animate({opacity:0},200,function(){
+            $('.content').removeClass('current');
+            $("#"+tab_id).addClass('current');
+            $('.content').animate({opacity:1},200);
+        });
+    });
+    $("#index").addClass('current');
+});
+</script>
 </body>
 </html>

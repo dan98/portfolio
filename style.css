@@ -15,6 +15,9 @@
 	background-color:transparent;
 }
 
+a:hover{
+	cursor:url(http://cdn.acfrg.com/o/large.nl/hand3.cur), auto;
+}
 
 body {
 	padding: 0px;
@@ -27,7 +30,6 @@ body {
 	background-attachment: fixed;
 	background-repeat: repeat;
 	background-color: #ffffff;
-	background-image:url(http://assets.tumblr.com/images/x.gif?v=1)
 }
 
 a:link, a:active, a:visited{
@@ -111,6 +113,21 @@ a:hover {
 	border-bottom:1px solid #cccccc;
 }
 
+#footer{
+	left:50%;
+	margin-left:-475px;
+	bottom:0px;
+	position:fixed;
+	margin-right:auto;
+	width: 950px;
+	text-align:right;
+	padding:5px;
+	z-index:999;
+	padding-bottom:50px;
+	background:#ffffff;
+	border-top:1px solid #cccccc;
+}
+
 #sidebar{
 	left:50%;
 	margin-left:-475px;
@@ -128,7 +145,7 @@ a:hover {
 	padding:5px;
 	outline:1px solid white;
 	background:#ffffff;
-	outline-offset:-10px;
+	outline-offset:-13px;
 	border:1px solid #cccccc;
 
 }
@@ -164,23 +181,26 @@ a:hover {
 	text-decoration:underline;
 	opacity:1;
 }
+.content{
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
 
+.content.current{
+	display: inherit;
+}
 
 .entry{
 	float:left;
 	display: block;
 	margin:30px;
-	width: 180px;
 	-webkit-filter: grayscale(70%);
 	padding:5px;
 	border:1px solid #cccccc;
 
 	background:white;
 	background-image:URL();
-}
-
-.entry img{
-	max-width:100%;
 }
 
 #jaz{
@@ -200,8 +220,8 @@ a:hover {
 	outline-offset:-20px;
 }
 
-#content{
-	width: 780px; 
+.content{
+	width: 700px; 
 	margin-top:110px; 
 	z-index:99;
 	margin-left:-280px;
@@ -211,7 +231,8 @@ a:hover {
 	margin-right:auto;
 	position:relative;
 	overflow-y: hidden;
-
+	position: relative;
+	height: 706px;
 }
 
 
@@ -251,29 +272,6 @@ a:hover {
 	width:auto;
 	margin-right: -12px;
 	text-align: right;
-}
-
-
-#s-m-t-tooltip{
-	max-width:600px;
-	background:#ffffff;
-	border:1px solid #cccccc;
-	padding:3px;
-	margin:20px;
-	color:#9b9b9b; 
-	z-index:9999999999;
-}
-
-
-#infscr-loading{
-	bottom: -70px;
-	position: absolute;
-	left: 50%;
-	margin-left:-8px;
-	width:16px;
-	height:11px;
-	overflow:hidden;
-	margin-bottom: 50px;
 }
 
 #caption{
